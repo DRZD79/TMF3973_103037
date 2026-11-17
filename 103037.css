@@ -1,0 +1,32 @@
+
+/* Reset browser default styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+/* Set the background colour */
+body {
+    background-color: pink;
+}
+
+/* Style the heading */
+h1 {
+    margin: 10px 20px;
+    text-align: center;
+}
+
+/* Style the form */
+form {
+    width: 80%;
+    margin: auto;
+}
+
+/* Add shadow effects to the boxes */
+.personal-information,
+.address {
+    box-shadow: 0 0 10px gray;
+    padding: 20px;
+    margin: 20px 0;
+}

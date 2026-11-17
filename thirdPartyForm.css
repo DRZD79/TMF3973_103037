@@ -1,0 +1,168 @@
+/* get from https://freefrontend.com/css-contact-forms/#Floating-Contact-Form-CSS-l */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+  background-color: #d1f3e7;
+  padding: 30px 15px;
+}
+
+h1{
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* form animation starts */
+form {
+  background: #fff;
+  box-shadow: 0 30px 60px 0 rgba(16, 17, 18, 0.4);
+  border-radius: 5px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  left: 0;
+  right: 0;
+  position: relative;
+  border-top: 5px solid #b9729e;
+/*   z-index: 1; */
+  animation: bounce 1.5s infinite;
+}
+
+fieldset {
+  border: 1px solid #ebebeb;
+  border-radius: 5px;
+  margin: 15px 0;
+  padding: 5px 15px 15px;
+}
+
+/* the secondaryTitle */
+legend {
+  color: grey;
+  padding: 0 5px;
+}
+
+label {
+  display: block;
+  color: grey;
+  font-size: 0.9em;
+  margin-top: 15px;
+}
+
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+  display: inline;
+  margin: 0 10px 0 0;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"],
+input[type="tel"],
+input[type="email"],
+select,
+textarea {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;                 
+  margin: 5px 0 0;
+  padding: 10px;
+  border: none;
+  border-bottom: 5px solid transparent;
+  border-radius: 2px;
+  background-color: #ebebeb;
+  transition: all 0.5s ease 0s;
+}
+
+input[type="text"]:hover,
+input[type="date"]:hover,
+input[type="number"]:hover,
+input[type="tel"]:hover,
+input[type="email"]:hover,
+select:hover,
+textarea:hover,
+input:focus,
+select:focus,
+textarea:focus {
+  border-bottom: 5px solid #b9729e;
+  outline: none;
+}
+ 
+::-webkit-input-placeholder { font-size: 1.1em; }
+::placeholder { font-size: 1.1em; }
+ 
+/* was .message */
+textarea {
+  height: 8rem;
+  overflow: hidden;
+  resize: vertical;
+  margin-top: 20px;
+}
+ 
+/* the checkbox and radio buttons keep their native look */
+input[type="radio"],
+input[type="checkbox"] { margin-right: 5px; }
+ 
+/* use https://freefrontend.com/css-buttons/#HTML-CSS-Hover-Buttons-Effect-l
+except that :after cannot be put after <input>, so replace with simple line */
+input[type="submit"],
+input[type="reset"] {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 15px 0 0;
+  padding: 10px;
+  border: none;
+  border-radius: 2px;
+  font-size: 20px;
+  color: white;
+  background-color: #b9729e;
+  cursor: pointer;
+  transition: all 0.5s ease 0s;
+}
+/* Clear button is secondary so Register stands out */
+input[type="reset"] {
+  background-color: grey;
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  box-shadow: 15px 15px 15px 5px rgba(78, 72, 77, 0.219);
+  transform: translateY(-3px);
+  border-top: 5px solid #cb7edc;
+  border-radius: 0%;
+}
+
+input[type="submit"],
+input[type="reset"] {
+  background-image: linear-gradient(#f352ff, #f352ff);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: 0 3px;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  background-position: left bottom;
+  background-size: 100% 3px;
+}
+
+/* "Back to Main Page" link */
+p { text-align: center; margin-top: 15px; }
+a { color: #b9729e; }
+ 
+/* fixed typo: was "tranform", so the first keyframe was ignored */
+@keyframes bounce {
+  0%   { transform: translate(0, 4px); }
+  50%  { transform: translate(0, 8px); }
+  100% { transform: translate(0, 0); }
+}

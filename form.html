@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>A registration form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link id="stylesheet" rel="stylesheet" type="text/css" href="103037.css">
+  <link id="stylesheet" rel="stylesheet" type="text/css" href="thirdPartyForm.css">
+  
+
+        <style>
+        body {
+            background-color: pink;
+        }
+
+    </style>
+</head>
+<body>
+  <h1>A registration form</h1>
+ 
+  <form action="#" method="post" autocomplete="on" novalidate>
+    <fieldset>
+      <legend>Personal Information</legend>
+ 
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" name="fname" required autofocus autocomplete="given-name"><br>
+ 
+      <label for="lname">Last Name</label>
+      <input type="text" id="lname" name="lname" required autocomplete="family-name"><br>
+ 
+      Gender
+      <input type="radio" id="male" name="gender" value="male" required>
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="female" required>
+      <label for="female">Female</label><br>
+ 
+      <label for="birthday">Birthday</label>
+      <input type="date" id="birthday" name="birthday" max="2026-10-12" required><br>
+ 
+      <label for="age">Age</label>
+      <input type="number" id="age" name="age" min="1" max="120" required><br>
+ 
+      <label for="tel">Telephone</label>
+      <input type="tel" id="tel" name="tel" placeholder="60-10-1234567"
+             pattern="[0-9]{2}-[0-9]{2}-[0-9]{7,8}" required autocomplete="tel"><br>
+ 
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required autocomplete="email"><br>
+    </fieldset>
+ 
+    <fieldset>
+      <legend>Address</legend>
+ 
+      <label for="street">Street</label>
+      <input type="text" id="street" name="street" required autocomplete="street-address"><br>
+ 
+      <label for="city">City</label>
+      <input type="text" id="city" name="city" required autocomplete="address-level2"><br>
+ 
+      <label for="state">State</label>
+      <select id="state" name="state" required>
+        <option value="Johor">Johor</option>
+        <option value="Kedah">Kedah</option>
+        <option value="Kelantan">Kelantan</option>
+        <option value="Melaka">Melaka</option>
+        <option value="Negeri Sembilan">Negeri Sembilan</option>
+        <option value="Pahang">Pahang</option>
+        <option value="Perak">Perak</option>
+        <option value="Perlis">Perlis</option>
+        <option value="Pulau Pinang">Pulau Pinang</option>
+        <option value="Sabah">Sabah</option>
+        <option value="Sarawak">Sarawak</option>
+        <option value="Selangor">Selangor</option>
+        <option value="Terengganu">Terengganu</option>
+        <option value="Kuala Lumpur">Kuala Lumpur</option>
+        <option value="Labuan">Labuan</option>
+        <option value="Putrajaya">Putrajaya</option>
+      </select><br>
+ 
+      <label for="country">Country</label>
+      <select id="country" name="country" required>
+        <option value="Afghanistan">Afghanistan</option>
+        <option value="Australia">Australia</option>
+        <option value="Brunei">Brunei</option>
+        <option value="China">China</option>
+        <option value="India">India</option>
+        <option value="Indonesia">Indonesia</option>
+        <option value="Malaysia" selected>Malaysia</option>
+        <option value="Singapore">Singapore</option>
+        <option value="Thailand">Thailand</option>
+        <option value="United Kingdom">United Kingdom</option>
+        <option value="United States">United States</option>
+      </select><br>
+ 
+      <label for="postcode">Postcode</label>
+      <input type="text" id="postcode" name="postcode" pattern="[0-9]{5}"
+             placeholder="98000" maxlength="5" required autocomplete="postal-code"><br>
+    </fieldset>
+ 
+    <fieldset>
+    <legend>Terms and Conditions</legend>
+
+    <p>Please read and accept all the following terms:</p>
+
+    <input type="checkbox" id="term1" name="terms[]" value="term1" required>
+    <label for="term1">I confirm that the personal information I provided is correct.</label>
+    <br>
+
+    <input type="checkbox" id="term2" name="terms[]" value="term2" required>
+    <label for="term2">I agree to the collection and use of my information for registration purposes.</label>
+    <br>
+
+    <input type="checkbox" id="term4" name="terms[]" value="term4" required>
+    <label for="term4">I have read and agree to all the Terms and Conditions above.</label>
+    <br>
+</fieldset><br>
+ 
+    <input type="submit" value="Register">
+    <input type="reset" value="Clear">
+  </form>
+ 
+  <p><a href="scone.html">Back to Main Page</a></p>
+  <script src="validate.js"></script>
+</body>
+</html>
